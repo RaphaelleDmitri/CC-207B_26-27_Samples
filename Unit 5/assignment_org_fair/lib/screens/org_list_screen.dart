@@ -28,7 +28,7 @@ class _OrgListScreenState extends State<OrgListScreen> {
     super.initState();
     // TODO 1: Start loading the orgs ONCE: store repository.fetchOrgs() in
     //   _orgsFuture.
-    _orgsFuture = Future.value(const <Org>[]); // replace this line
+   _orgsFuture = widget.repository.fetchOrgs(); // replace this line
   }
 
   // EXPLAIN E2: Why is _searchController disposed here? What would happen
